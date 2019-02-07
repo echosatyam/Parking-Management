@@ -6,14 +6,30 @@ const passport = require('passport');
 const User = require('../models/User');
 
 // Login Page
-router.get('/login', (req, res) => res.render('login', {
-  login: false
-}));
+router.get('/login', function (req, res) {
+  if (req.user) {
+    res.render("error.ejs", {
+      login: req.user
+    })
+  } else {
+    res.render('login', {
+      login: req.user
+    })
+  }
+});
 
 // Register Page
-router.get('/register', (req, res) => res.render('register',{
-  login: false
-}));
+router.get('/register', function (req, res) {
+  if (typeof (req.user) != "undefined") {
+    res.render("error.ejs", {
+      login: false
+    })
+  } else {
+    res.render('register', {
+      login: false
+    })
+  }
+});
 
 // Register
 router.post('/register', (req, res) => {
@@ -45,6 +61,7 @@ router.post('/register', (req, res) => {
 
   if (errors.length > 0) {
     res.render('register', {
+      login: false,
       errors,
       name,
       email,
@@ -60,6 +77,7 @@ router.post('/register', (req, res) => {
           msg: 'Email already exists'
         });
         res.render('register', {
+          login: false,
           errors,
           name,
           email,

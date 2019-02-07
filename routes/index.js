@@ -5,14 +5,23 @@ const {
 } = require('../config/auth');
 
 // Welcome Page
-router.get('/', (req, res) => res.render('welcome', {
-  login: false
-}));
+router.get('/', function (req, res) {
+  if (req.user) {
+    res.render('portfolio', {
+      login: req.user
+    })
+  } else {
+    res.render('welcome', {
+      login: req.user
+    });
+  }
+  // console.log(req.user);
+});
 
 // Dashboard
 router.get('/dashboard', ensureAuthenticated, (req, res) =>
   res.render('dashboard', {
-    login: true,
+    login: req.user,
     user: req.user
   })
 );
