@@ -15,7 +15,6 @@ router.get('/', function (req, res) {
       login: req.user
     });
   }
-  // console.log(req.user);
 });
 
 // Dashboard

@@ -117,3 +117,50 @@
 .bg-dark {
     background-color: aquamarine
 }
+
+body {
+    padding-top: 0;
+    margin-bottom: 50px;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+    color: #0a4d3f !important;
+}
+
+/* 
+.footer-padding {
+    padding-bottom: 60px;
+} */
+.footer {
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: red; */
+    /* color: white; */
+    text-align: center;
+    padding: .5rem;
+}
+
+.footer h2 {
+    /* margin-top: 25px; */
+    /* font-size: 12px; */
+    color: #fff;
+}

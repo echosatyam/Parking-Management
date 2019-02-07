@@ -9,9 +9,10 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="/">
-          <i class="fa fa-home"></i>
+          <i class="fas fa-home fa-2x"></i>
+          <br>
           Home
-          <span class="sr-only">(current)</span>
+          <!-- <span class="sr-only">(current)</span> -->
         </a>
       </li>
 
@@ -22,47 +23,55 @@
 
     <ul class="navbar-nav ">
       <% if(login){ %>
+      <li class="nav-item">
+        <a class="nav-link active" href="/dashboard">
+
+          <i class="fas fa-user fa-2x"></i>
+          <!-- <span class="badge badge-danger">11</span> -->
+          <br>
+
+          Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/users/monitor">
+          <i class="fas fa-desktop fa-2x"></i><br>
+          Monitor
+        </a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link" href="/users/logout">
-          <i class="fa fa-sign-out"></i>
+          <i class="fas fa-sign-out-alt fa-2x"></i>
           <!-- <span class="badge badge-info">11</span> -->
-          </i>
+          <br>
           Logout
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/users/scan">
-          <i class="fa fa-envelope-o">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          scan
-        </a>
-      </li>
+
 
       <% } %>
       <% if( !login) { %>
       <li class="nav-item active">
         <a class="nav-link" href="/users/login">
-          <i class="fa fa-sign-in">
-            <!-- <span class="badge badge-success">11</span> -->
-          </i>
+          <i class="fas fa-sign-in-alt fa-2x"></i>
+          <br>
           Login
         </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/users/register">
-          <i class="fa fa-user">
-            <!-- <span class="badge badge-success">11</span> -->
-          </i>
+          <i class="far fa-registered fa-2x"></i>
+          <br>
           Register
         </a>
       </li>
       <% } %>
-
     </ul>
 
   </div>
 </nav>
+
 <div class="row mt-5">
   <div class="col-md-6 m-auto">
     <div class="card card-body">
@@ -95,4 +104,11 @@
       <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
     </div>
   </div>
+</div>
+
+
+<div class="footer bg-dark">
+
+  <h2>Parking Management System</h2>
+
 </div>
