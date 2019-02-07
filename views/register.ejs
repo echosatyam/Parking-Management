@@ -1,3 +1,67 @@
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Smart Parking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i class="fa fa-home"></i>
+          Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+
+
+
+    </ul>
+
+
+    <ul class="navbar-nav ">
+      <% if(login){ %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/logout">
+          <i class="fa fa-sign-out"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          </i>
+          Logout
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/users/scan">
+          <i class="fa fa-envelope-o">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          scan
+        </a>
+      </li>
+
+      <% } %>
+      <% if( !login) { %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/login">
+          <i class="fa fa-sign-in">
+            <!-- <span class="badge badge-success">11</span> -->
+          </i>
+          Login
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/register">
+          <i class="fa fa-user">
+            <!-- <span class="badge badge-success">11</span> -->
+          </i>
+          Register
+        </a>
+      </li>
+      <% } %>
+    </ul>
+
+  </div>
+</nav>
 <div class="row mt-5">
   <div class="col-md-6 m-auto">
     <div class="card card-body">
@@ -8,47 +72,20 @@
       <form action="/users/register" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
-          <input
-            type="name"
-            id="name"
-            name="name"
-            class="form-control"
-            placeholder="Enter Name"
-            value="<%= typeof name != 'undefined' ? name : '' %>"
-          />
+          <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name" value="<%= typeof name != 'undefined' ? name : '' %>" />
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Enter Email"
-            value="<%= typeof email != 'undefined' ? email : '' %>"
-          />
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="form-control"
-            placeholder="Create Password"
-            value="<%= typeof password != 'undefined' ? password : '' %>"
-          />
+          <input type="password" id="password" name="password" class="form-control" placeholder="Create Password" value="<%= typeof password != 'undefined' ? password : '' %>" />
         </div>
         <div class="form-group">
           <label for="password2">Confirm Password</label>
-          <input
-            type="password"
-            id="password2"
-            name="password2"
-            class="form-control"
-            placeholder="Confirm Password"
-            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
-          />
+          <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
         </div>
         <button type="submit" class="btn btn-primary btn-block">
           Register
