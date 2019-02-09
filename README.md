@@ -1,8 +1,8 @@
-# Node.js & Passport Login
+# Parking Management System
 
-This is a user login and registration app using Node.js, Express, Passport, Mongoose, EJS and some other packages.
+Parking management system using nodejs and sensors .
 
-### Version: 2.0.0
+
 
 ### Usage
 
@@ -11,12 +11,11 @@ $ npm install
 ```
 
 ```sh
-$ npm start
-# Or run with Nodemon
-$ npm run dev
+$ nodemon app.js
 
-# Visit http://localhost:5000
+# Visit http://localhost:MYPORT 
 ```
+MyPort is a const in app.js
 
 ### MongoDB
 
