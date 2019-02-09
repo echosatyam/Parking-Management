@@ -1,0 +1,146 @@
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="#">Smart Parking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i class="fas fa-home fa-2x"></i>
+          <br>
+          Home
+          <!-- <span class="sr-only">(current)</span> -->
+        </a>
+      </li>
+
+
+
+    </ul>
+
+
+    <ul class="navbar-nav ">
+      <% if(login){ %>
+      <li class="nav-item">
+        <a class="nav-link active" href="/dashboard">
+
+          <i class="fas fa-user fa-2x"></i>
+          <!-- <span class="badge badge-danger">11</span> -->
+          <br>
+
+          Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/monitor">
+          <i class="fas fa-desktop fa-2x"></i><br>
+          Monitor
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Parking">
+          <i class="fas fa-car fa-2x"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          <br>
+          Parking
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/logout">
+          <i class="fas fa-sign-out-alt fa-2x"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          <br>
+          Logout
+        </a>
+      </li>
+
+
+      <% } %>
+      <% if( !login) { %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/login">
+          <i class="fas fa-sign-in-alt fa-2x"></i>
+          <br>
+          Login
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/register">
+          <i class="far fa-registered fa-2x"></i>
+          <br>
+          Register
+        </a>
+      </li>
+      <% } %>
+    </ul>
+
+  </div>
+</nav>
+
+
+<div class="container">
+
+  <h1 class="text-center mt-4"> Parking Slots</h1>
+
+</div>
+<div class="container">
+  <table class="mx-auto">
+    <tr>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block"></th> -->
+      <td class="rounded px-2 py-2 bg-dark ">XX</td>
+      <td class="rounded px-2 py-2 bg-info  ">C1</td>
+      <td class="rounded px-2 py-2 bg-info ">C2</td>
+      <td class="rounded px-2 py-2 bg-info ">C3</td>
+      <td class="rounded px-2 py-2 bg-info ">C4</td>
+      <td class="rounded px-2 py-2 bg-info ">C5</td>
+      <td class="rounded px-2 py-2 bg-info ">C6</td>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block"></th> -->
+    </tr>
+    <tr>
+      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
+      <td><button type="button" class="btn bg-success btn-block">01</button></td>
+      <td><button type="button" class="btn bg-success btn-block">02</button></td>
+      <td><button type="button" class="btn bg-success btn-block">03</button></td>
+      <td><button type="button" class="btn bg-success btn-block">04</button></td>
+      <td><button type="button" class="btn bg-success btn-block">05</button></td>
+      <td><button type="button" class="btn bg-success btn-block">06</button></td>
+    </tr>
+    <tr>
+      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
+      <td><button type="button" class="btn bg-success btn-block">07</button></td>
+      <td><button type="button" class="btn bg-success btn-block">08</button></td>
+      <td><button type="button" class="btn bg-success btn-block">09</button></td>
+      <td><button type="button" class="btn bg-success btn-block">10</button></td>
+      <td><button type="button" class="btn bg-success btn-block">11</button></td>
+      <td><button type="button" class="btn bg-success btn-block">12</button></td>
+    </tr>
+    <tr>
+      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
+      <td><button type="button" class="btn bg-success btn-block">14</button></td>
+      <td><button type="button" class="btn bg-success btn-block ">14</button></td>
+      <td><button type="button" class="btn bg-success btn-block ">15</button></td>
+      <td><button type="button" class="btn bg-success btn-block">16</button></td>
+      <td><button type="button" class="btn bg-success btn-block ">17</button></td>
+      <td><button type="button" class="btn bg-success btn-block">18</button></td>
+    </tr>
+    <tr>
+      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
+      <td><button type="button" class="btn bg-success btn-block">19</button></td>
+      <td><button type="button" class="btn bg-success btn-block">20</button></td>
+      <td><button type="button" class="btn bg-success btn-block">21</button></td>
+      <td><button type="button" class="btn bg-success btn-block">22</button></td>
+      <td><button type="button" class="btn bg-success btn-block">23</button></td>
+      <td><button type="button" class="btn bg-success btn-block">24</button></td>
+    </tr>
+
+  </table>
+</div>
+
+<div class="footer bg-info">
+
+  <h2>Parking Management System</h2>
+
+</div>

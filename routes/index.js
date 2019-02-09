@@ -25,4 +25,18 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
   })
 );
 
+router.get('/monitor', ensureAuthenticated, (req, res) =>
+  res.render('monitor', {
+    login: req.user,
+    user: req.user
+  })
+);
+router.get('/parking', ensureAuthenticated, (req, res) =>
+  res.render('parking', {
+    login: req.user,
+    user: req.user
+  })
+);
+
+
 module.exports = router;

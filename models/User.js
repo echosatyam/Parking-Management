@@ -20,7 +20,12 @@ const UserSchema = new mongoose.Schema({
   rfid: {
     type: String,
     default: null
+  },
+  model: {
+    type: String,
+    default: null
   }
+  
 });
 
 const User = mongoose.model('User', UserSchema);

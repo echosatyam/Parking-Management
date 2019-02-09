@@ -1,4 +1,4 @@
-<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-info">
   <a class="navbar-brand" href="#">Smart Parking</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,9 +27,8 @@
         <a class="nav-link active" href="/dashboard">
 
           <i class="fas fa-user fa-2x"></i>
-          <!-- <span class="badge badge-danger">11</span> -->
-          <br>
 
+          <br>
           Dashboard
         </a>
       </li>
@@ -43,7 +42,6 @@
       <li class="nav-item active">
         <a class="nav-link" href="/Parking">
           <i class="fas fa-car fa-2x"></i>
-          <!-- <span class="badge badge-info">11</span> -->
           <br>
           Parking
         </a>
@@ -56,8 +54,6 @@
           Logout
         </a>
       </li>
-
-
       <% } %>
       <% if( !login) { %>
       <li class="nav-item active">
@@ -76,20 +72,32 @@
       </li>
       <% } %>
     </ul>
-
   </div>
 </nav>
 
-<div class="row mt-5">
-  <div class="col-md-6 m-auto">
-    <div class="card card-body text-center">
-
-      <p>Welcome To our portfolio page </p>
-
-    </div>
-  </div>
+<div class="mb-5 bg-light text-center">
+  <h2>Car Details of
+    <%= user.name %>
+  </h2>
 </div>
-<div class="footer bg-primary">
+<div class="row mt-5 col-md-6 m-auto card card-body">
+
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">RFID Tag</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="RFID Tag">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Car Model</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Car Model">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-info btn-block">Scan</button>
+    </div>
+  </form>
+</div>
+
+<div class="footer bg-info">
 
   <h2>Parking Management System</h2>
 
