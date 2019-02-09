@@ -11,8 +11,8 @@
         <a class="nav-link active" href="/users/scan">
           <i class="fa fa-envelope-o">
             <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          scan
+          </i> 
+          scan a
         </a>
       </li>
 
