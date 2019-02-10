@@ -35,3 +35,13 @@
         </a>
       </li>
       <% } %>
+
+
+
+
+       <h1 class=" text-center mx-auto bg-success d-block col-md-4">
+    <%=slotSuccess%>
+  </h1>
+  <h1 class=" text-center mx-auto bg-danger d-block col-md-4">
+    <%=slotFailure%>
+  </h1>

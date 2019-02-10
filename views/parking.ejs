@@ -81,35 +81,42 @@
 </nav>
 
 
-<div class="container">
+<div class="container mb-0">
 
   <h1 class="text-center mt-4"> Parking Slots</h1>
 
 </div>
+
 <div class="container">
+
+  <div class="mx-auto col-md-4">
+    <% include ./partials/messages %>
+  </div>
+
   <table class="mx-auto">
-    <tr>
-      <!-- <th class="rounded px-2 py-2 bg-info d-block"></th> -->
+
+    <!-- <tr>
+    
       <td class="rounded px-2 py-2 bg-dark ">XX</td>
-      <td class="rounded px-2 py-2 bg-info  ">C1</td>
+      <td class="rounded px-2 py-2 bg-info ">C1</td>
       <td class="rounded px-2 py-2 bg-info ">C2</td>
       <td class="rounded px-2 py-2 bg-info ">C3</td>
       <td class="rounded px-2 py-2 bg-info ">C4</td>
       <td class="rounded px-2 py-2 bg-info ">C5</td>
       <td class="rounded px-2 py-2 bg-info ">C6</td>
-      <!-- <th class="rounded px-2 py-2 bg-info d-block"></th> -->
+     
+    </tr> -->
+    <tr>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
+      <td><button type="button" id="C1R1" class="btn bg-success btn-block">01</button></td>
+      <td><button type="button" id="C2R1" class="btn bg-success btn-block">02</button></td>
+      <td><button type="button" id="C3R1" class="btn bg-success btn-block">03</button></td>
+      <td><button type="button" id="C4R1" class="btn bg-success btn-block">04</button></td>
+      <td><button type="button" id="C5R1" class="btn bg-success btn-block">05</button></td>
+      <td><button type="button" id="C6R1" class="btn bg-success btn-block">06</button></td>
     </tr>
     <tr>
-      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
-      <td><button type="button" class="btn bg-success btn-block">01</button></td>
-      <td><button type="button" class="btn bg-success btn-block">02</button></td>
-      <td><button type="button" class="btn bg-success btn-block">03</button></td>
-      <td><button type="button" class="btn bg-success btn-block">04</button></td>
-      <td><button type="button" class="btn bg-success btn-block">05</button></td>
-      <td><button type="button" class="btn bg-success btn-block">06</button></td>
-    </tr>
-    <tr>
-      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
       <td><button type="button" class="btn bg-success btn-block">07</button></td>
       <td><button type="button" class="btn bg-success btn-block">08</button></td>
       <td><button type="button" class="btn bg-success btn-block">09</button></td>
@@ -118,7 +125,7 @@
       <td><button type="button" class="btn bg-success btn-block">12</button></td>
     </tr>
     <tr>
-      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
       <td><button type="button" class="btn bg-success btn-block">14</button></td>
       <td><button type="button" class="btn bg-success btn-block ">14</button></td>
       <td><button type="button" class="btn bg-success btn-block ">15</button></td>
@@ -127,7 +134,7 @@
       <td><button type="button" class="btn bg-success btn-block">18</button></td>
     </tr>
     <tr>
-      <th class="rounded px-2 py-2 bg-info d-block">R1</th>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
       <td><button type="button" class="btn bg-success btn-block">19</button></td>
       <td><button type="button" class="btn bg-success btn-block">20</button></td>
       <td><button type="button" class="btn bg-success btn-block">21</button></td>
@@ -137,6 +144,14 @@
     </tr>
 
   </table>
+  <form class="col-md-6 m-auto" action="/dashboard" method="POST">
+
+    <div class="form-group">
+      <label for="slot">Slot</label>
+      <input type="text" id="slot" name="slot" class="form-control" placeholder="Enter Slot" />
+    </div>
+    <button type="submit" class="btn btn-info btn-block">Book Slot</button>
+  </form>
 </div>
 
 <div class="footer bg-info">
