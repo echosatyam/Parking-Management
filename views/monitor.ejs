@@ -80,16 +80,19 @@
     <%= user.name %>
   </h2>
 </div>
+<div class="mx-auto col-md-4">
+  <% include ./partials/messages %>
+</div>
 <div class="row mt-5 col-md-6 m-auto card card-body">
 
-  <form>
+  <form method="POST" action="\monitor">
     <div class="form-group">
-      <label for="formGroupExampleInput">RFID Tag</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="RFID Tag">
+      <label for="RFID">RFID Tag</label>
+      <input type="text" class="form-control" id="RFID" placeholder="RFID Tag">
     </div>
     <div class="form-group">
-      <label for="formGroupExampleInput2">Car Model</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Car Model">
+      <label for="Model">Car Model</label>
+      <input type="text" class="form-control" id="Model" placeholder="Car Model">
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-info btn-block">Scan</button>

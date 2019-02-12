@@ -26,10 +26,33 @@ router.get('/', function (req, res) {
 // Dashboard
 router.get('/dashboard', ensureAuthenticated, function (req, res) {
   processParking();
-  res.render('dashboard', {
+  var Transactions = [];
+  db.collection('Slot').find({
+    email: req.user.email
+  }).toArray(function (err, result) {
+    //console.log(result);
+    for (var i = 0; i < result.length; i++) {
+      Transactions.push(result[i].slot);
+    }
+    res.render('dashboard', {
+      login: req.user,
+      user: req.user,
+      Transactions: Transactions
+    });
+
+  });
+  //console.log(Transactions)
+  // console.log(Transactions);
+
+});
+
+router.post('/monitor', function (req, res) {
+  console.log(req.body);
+  console.log(req.user.email);
+  res.render('monitor', {
     login: req.user,
-    user: req.user
-    // user.image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog '
+    user: req.user,
+    success_msg: "Entred"
   })
 });
 
@@ -42,11 +65,11 @@ router.get('/monitor', ensureAuthenticated, (req, res) =>
 
 function processParking() {
   db.collection('Slot').find({}).toArray(function (err, result) {
-    console.log(result);
+    //console.log(result);
     for (var i = 0; i < result.length; i++) {
       numbers[parseInt(result[i].slot)] = "bg-danger";
     }
-    console.log(numbers);
+    // console.log(numbers);
   });
 }
 router.get('/parking', ensureAuthenticated, function (req, res) {
@@ -84,11 +107,12 @@ MongoClient.connect(url, (err, database) => {
   // start the express web server listening on 8080
 });
 router.post('/parking', (req, res) => {
-
-  console.log("post");
-  console.log(numbers)
+  // console.log(req.user);
+  // console.log("post");
+  // console.log(numbers)
   const slot = parseInt(req.body.slot);
   const newSlot = new Slot({
+    email: req.user.email,
     slot: req.body.slot
   });
   if (slot > 0 && slot < 25) {

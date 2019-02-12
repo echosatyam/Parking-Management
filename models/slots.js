@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const SlotSchema = new mongoose.Schema({
+  email: {
+    type: String
+  },
   slot: {
     type: String,
   }
