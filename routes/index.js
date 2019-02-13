@@ -49,11 +49,26 @@ router.get('/dashboard', ensureAuthenticated, function (req, res) {
 router.post('/monitor', function (req, res) {
   console.log(req.body);
   console.log(req.user.email);
+
+  var myquery = {
+    email: req.user.email
+  };
+  var newvalues = {
+    $set: {
+      rfid: req.body.RFID,
+      model: req.body.Model
+    }
+  };
+  db.collection("users").updateOne(myquery, newvalues, function (err, res) {
+    if (err) throw err;
+    // console.log(res)
+    console.log("1 document updated");
+  });
   res.render('monitor', {
     login: req.user,
     user: req.user,
-    success_msg: "Entred"
-  })
+    success_msg: "Entered"
+  });
 });
 
 router.get('/monitor', ensureAuthenticated, (req, res) =>

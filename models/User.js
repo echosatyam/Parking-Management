@@ -17,15 +17,14 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  rfid: {
-    type: String,
-    default: null
-  },
   model: {
     type: String,
     default: null
+  },
+  rfid: {
+    type: String,
+    default: null
   }
-  
 });
 
 const User = mongoose.model('User', UserSchema);
